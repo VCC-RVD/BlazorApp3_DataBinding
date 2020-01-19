@@ -1,7 +1,12 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h2>@mensagem</h2>
+<h3>@mostraMensagem()</h3>
+@code{
+    private string mensagem = "mensgem original";
+    private string mostraMensagem()
+    {
+        return "retornei alguma mensagem";
+    }
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+}
