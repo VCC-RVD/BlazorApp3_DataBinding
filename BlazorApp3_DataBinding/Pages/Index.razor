@@ -1,8 +1,13 @@
 ﻿@page "/"
 
-<h2>@mensagem</h2> estou mostrando a mensagem
-<h3>@mostraMensagem()</h3> @*estou chamando o metodo direto do html*@
-<button @onclick="AtualizaMensagem">Atualizar a mensagem da tela</button> @*Atualizar a mensagem da tela</button> estou chamando o metodo de dentro do envendo click do botao html*@
+<h2>@mensagem</h2> 
+ 
+<h3>@mostraMensagem()</h3>
+<button @onclick="AtualizaMensagem">Atualizar a mensagem da tela</button> 
+<br />
+<hr />  
+<input @bind ="@mensagem" />
+
 @code{
     private string mensagem = "mensgem original"; /*variavel com a mensagem original*/
     private string mostraMensagem() /*metodo mostra a mensagem*/
